@@ -1,22 +1,29 @@
 body{
     margin: 0;
 }
-h1{
+header{
     text-align: center;
     background-color: #38761d;
     color: #ffffff;
-    padding: 10px;
+    padding: 1px;
     margin: 0;
 }
+/* Navigation Bar */
+.navbar::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .navbar ul{
-    list-style-type: none;
-    background-color: #ffffff;
-    padding: 10px;
+    list-style: none;
     margin: 0;
-    overflow: hidden;
+    padding: 10px;
+    background: white;
+    overflow: visible;
 }
 .navbar li{
     float: right;
+    position: relative;
 }
 .navbar img {
     width: 50px;
@@ -33,7 +40,74 @@ h1{
     background-color: #38761d;
     color: #ffffff;
 }
-main{
-    margin: 20px;
+/*navbar inssuannces*/
+.Issuances-dropdown{
+    position: relative;
+}
+.Issuances-dropdownmenu{
+    display: none;
+    position: absolute;
+    background-color: #38761d;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    z-index: 1000;
+}
+.Issuances-dropdownmenu li{
+    float: none;
+    width: 100%;
+}
+.Issuances-dropdownmenu a{
+    display: block;
+    padding: 10px;
+}
+.Issuances-dropdown:hover .Issuances-dropdownmenu{
+    display: block;
+}
+ 
+/* Hero Content */
+.hero{
+    clear: both;
+}
+.hero {
+    height: 500px;
+    background-image: url("school1.jpg");
+    background-size: cover;
+    background-position: center;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content hr {
+    width: 70%;
+    height: 5px;
+    background: #38761d;
+    border: none;
+    margin: 0 auto 30px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
 }
