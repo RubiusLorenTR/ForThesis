@@ -1,11 +1,26 @@
 body{
     margin: 0;
 }
-header{
-    text-align: center;
+/* Header */
+header {
     background-color: #38761d;
     color: #ffffff;
-    padding: 1px;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+}
+
+header h3 {
     margin: 0;
 }
 /* Navigation Bar */
@@ -23,12 +38,6 @@ header{
 .navbar li{
     float: right;
     position: relative;
-}
-.navbar img {
-    width: auto;
-    height: 32px;
-    display: flex;
-    float:left;
 }
 .navbar a{
     text-decoration: none;
