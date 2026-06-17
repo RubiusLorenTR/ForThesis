@@ -6,13 +6,40 @@
     <title>ACE SBM</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body>     
     <header>
-        <h1>ALANGILAN CENTRAL ES DATA - BASED MANAGEMENT SYSTEM</h1>
-    </header>
+    <div class="header-content">
+        <img src="logo.png" class="logo" alt="ACES Logo">
+        <h2>ALANGILAN CENTRAL ES DATA - BASED MANAGEMENT SYSTEM</h2>
+    </div>
+</header>
+<div class="login-modal" id="loginModal">
+    <div class="login-box">
+        <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+
+        <img src="logo.png" class="login-logo" alt="ACES Logo">
+        <h2>Login to ACES SBM</h2>
+        <p>Use your Google account to continue.</p>
+
+        <button class="google-btn">
+            Continue with Google
+        </button>
+    </div>
+</div>
+
+<script>
+    function openLoginModal() {
+        document.getElementById("loginModal").style.display = "flex";
+    }
+
+    function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+    }
+</script>  
     <nav class="navbar">
-        <ul>    
-            <img src="logo.png" alt="logo">
+        <button class="login-btn" onclick="openLoginModal()">Login</button>
+
+        <ul>        
             <li><a href="ACESFaithbook.html">ACES Faithbook</a></li>
             <li><a href="Schedule.html">Schedule</a></li>
             <li><a href="NewsletterAndReports.html">Newsletter and Reports</a></li>
@@ -31,6 +58,7 @@
             <li><a href="Transparency.html">Transparency</a></li>
             <li><a href="ProgramsAndProjects.html">Programs and Projects</a></li>
             <li><a href="SchoolPerformance.html">School Performance</a></li>
+            <li><a href="#">About us</a></li>
             <li><a href="Home.html">Home</a></li>
         </ul>
     </nav>
